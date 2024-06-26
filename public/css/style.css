@@ -1,0 +1,56 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3f9d8; /* Color de fondo verde claro */
+    font-family: 'Arial', sans-serif; /* Fuente preferida */
+}
+
+.form {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #66bf85; /* Borde verde */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f0fff4; /* Fondo blanco verdoso */
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4e934d; /* Color verde oscuro para el título */
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    margin-bottom: 8px;
+    color: #4e934d; /* Color verde oscuro para las etiquetas */
+}
+
+.form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #66bf85; /* Borde verde */
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form button {
+    padding: 10px 20px;
+    background-color: #4e934d; /* Verde oscuro para el fondo del botón */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form button:hover {
+    background-color: #3c7239; /* Verde más oscuro al pasar el cursor */
+}
