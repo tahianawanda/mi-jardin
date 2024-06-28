@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<head>
-    <title>Registro</title>
-    <link rel="stylesheet" href="{{asset('css\style.css')}}">
-</head>
-<body>
+@extends('acces.layout')
+
+@section('title', 'Registro')
+
+@section('content')
     <div class="form">
         <h2>Registrese</h2>
         <form action="POST" method="{{ route('register') }}">
@@ -22,6 +21,4 @@
         </form>
 
     </div>
-    
-</body>
-</html>
+    @endsection

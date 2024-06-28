@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Login</title>
-    <link rel="stylesheet" href="{{ asset('css\style.css') }}">
+@extends('acces.layout')
 
-</head>
-<body>
+@section('title', 'Login')
+
+@section('content')
     <div class="form">
         <h2>Ingrese su cuenta</h2>
         <form method="POST" action="{{ route('login') }}">
@@ -19,5 +16,4 @@
             
         </form>
     </div>
-</body>
-</html>
+@endsection

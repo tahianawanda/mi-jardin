@@ -4,14 +4,14 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #d3f9d8; /* Color de fondo verde claro */
+    background-color: #000000; /* Color de fondo verde claro */
     font-family: 'Arial', sans-serif; /* Fuente preferida */
 }
 
 .form {
     width: 400px;
     padding: 20px;
-    border: 1px solid #66bf85; /* Borde verde */
+    border: 1px solid #ffbb00; /* Borde verde */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f0fff4; /* Fondo blanco verdoso */
