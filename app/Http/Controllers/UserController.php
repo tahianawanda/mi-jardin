@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth; // Asegúrate de importar Auth
+use App\Models\User; // Asegúrate de importar el modelo User
+use Illuminate\Support\Facades\Hash; // Asegúrate de importar Hash
 
 class UserController extends Controller
 {
@@ -12,7 +16,7 @@ class UserController extends Controller
     public function login(Request $request){
         $credentials = $request->validate([
             'user' => ['string', 'min:6'],
-            'password' => ['string', 'min:6'],
+            'email' => ['string'],
         ]);
 
         if(Auth::attempt($credentials)){
@@ -34,14 +38,14 @@ class UserController extends Controller
     }
     public function register(Request $request){
         $validateData = $request->validate([
-            'name' => ['required', 'string', 'min:6'],
-            'lastname' => ['required', 'string', 'min:6'],
-            'user' => ['required', 'string', 'min:4', ],
-            'password' => ['required', 'min:6', 'confirmed'],
-            'email' => ['required', 'unique:user'],
+            'name' => ['required'],
+            'lastname' => ['required'],
+            'user' => ['required'],
+            'password' => ['required'],
+            'email' => ['required'],
         ]);
 
-        $newUSer = User::create([
+        $newUser = User::create([
             'name' => $validateData['name'],
             'lastname' => $validateData['lastname'],
             'user' => $validateData['user'],
@@ -49,7 +53,7 @@ class UserController extends Controller
             'email' => $validateData['email']
         ]);
 
-        return redirect('login/login.show')->with('status', 'Registrarion successul. Please
-        login.');
+        // Redirige a la ruta de login después de crear el usuario
+        return redirect('acces/login')->with('status', 'Registro exitoso. Por favor inicia sesión.');
     }
 }

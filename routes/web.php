@@ -1,13 +1,13 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\MijardinController;
 
-Route::get('/login', [UserController::class, 'showLoginForm'])->name('login.show');
-Route::get('/register', [UserController::class, 'showRegisterForm'])->name('register.show');
 
-Route::post('/login', [UserController::class, 'login'])->name('login');
-Route::post('/register', [UserController::class, 'register'])->name('register');
+Route::get('/login', [LoginController::class, 'create'])->name('login.create');
+Route::post('/login', [LoginController::class, 'store'])->name('login.store');
 
-Route::get('/dashboard', [MijardinController::class, 'showDashboard'])->name('dashboard.show');
+Route::get('/register', [RegisterController::class, 'create'])->name('register.create');
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+

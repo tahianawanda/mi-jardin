@@ -1,0 +1,125 @@
+/* Estilos generales */
+body {
+    font-family: 'Wittgenstein', sans-serif;
+    font-size: 50px;
+    background-color: #f4f4f9;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* Estilos generales para el contenedor principal */
+.container {
+    display: flex;
+    width: 100vw; /* Ancho total de la ventana del navegador */
+    height: 100vh; /* Altura total de la ventana del navegador */
+    overflow: hidden; /* Para asegurar que no haya desbordamiento horizontal */
+    margin: 0; /* Eliminamos cualquier margen exterior */
+}
+
+/* Estilos para el contenedor de la imagen */
+.image-container {
+    width: 60%; /* Ancho del contenedor de la imagen */
+    height: 100vh; /* Altura del contenedor de la imagen */
+    overflow: hidden; /* Para ocultar cualquier desbordamiento */
+    position: relative; /* Posición relativa para el posicionamiento de ::before */
+}
+
+/* Estilos para la imagen */
+.image-container img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 100%; /* La imagen ocupa toda la altura del contenedor */
+    object-fit: cover; /* Para asegurar que la imagen cubra todo el contenedor sin distorsión */
+}
+
+/* Estilos para el contenedor del formulario */
+.form-container {
+    width: 40%; /* Ancho del contenedor del formulario */
+    height: 100vh; /* Altura del contenedor del formulario */
+    background-color: #081201; /* Color de fondo del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Posición relativa para el posicionamiento de ::before */
+    z-index: 1; /* Aseguramos que el formulario esté encima de la imagen */
+    overflow: hidden; /* Para ocultar cualquier desbordamiento */
+}
+
+/* Estilos para el formulario */
+.form {
+    width: 100%;
+    max-width: 500px; /* Ancho máximo del formulario */
+    text-align: center;
+    color: #fff; /* Color del texto dentro del formulario */
+}
+
+.form h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: #fff; /* Color del título del formulario */
+}
+
+.form label {
+    display: block;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #c0c0c0; /* Color del texto de las etiquetas */
+    font-size: 20px;
+}
+
+.form input {
+    width: calc(100% - 20px); /* Ancho del input, considerando el padding */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #fff; /* Color del texto dentro de los inputs */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+}
+
+.form input:focus {
+    outline: none;
+    border-color: #fff; /* Color del borde al estar enfocado */
+}
+
+.form button {
+    background-color: #28a745; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.form button:hover {
+    background-color: #218838; /* Color de fondo del botón al pasar el mouse */
+}
+
+.form-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #007bff; /* Color del texto del enlace */
+    text-decoration: none;
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Pseudo-elemento para superponer la imagen */
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px; /* Ajuste para superponer un poco la imagen */
+    width: 20px; /* Ancho del pseudo-elemento */
+    height: 100%;
+    background-image: url("{{ asset('image/hongos.png') }}"); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajuste para cubrir completamente */
+    z-index: -1; /* Colocamos detrás del formulario */
+}

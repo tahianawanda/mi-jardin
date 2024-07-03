@@ -1,0 +1,29 @@
+/* Panel Vertical Izquierdo */
+.panel-izquierdo {
+    position: fixed;       /* Mantiene el panel en su lugar al desplazarse */
+    top: 0;                /* Alinea con el borde superior de la pantalla */
+    left: 0;               /* Alinea con el borde izquierdo de la pantalla */
+    height: 100vh;         /* Ocupa toda la altura de la pantalla */
+    width: 250px;          /* Ancho fijo para el panel */
+    background-color: #333;/* Color de fondo */
+    color: white;          /* Color del texto */
+    padding: 20px;         /* Relleno interno */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5); /* Sombra para darle profundidad */
+    overflow-y: auto;      /* Añade un scrollbar si el contenido excede la altura del panel */
+}
+
+/* Estilos adicionales (opcional) */
+.panel-izquierdo h2 {
+    margin-top: 0;         /* Elimina el margen superior del título */
+}
+
+.panel-izquierdo a {
+    color: #fff;           /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    display: block;        /* Cada enlace ocupa toda la línea */
+    padding: 10px 0;       /* Relleno para los enlaces */
+}
+
+.panel-izquierdo a:hover {
+    background-color: #575757; /* Color de fondo al pasar el ratón */
+}
