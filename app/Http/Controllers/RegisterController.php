@@ -42,7 +42,7 @@ class RegisterController extends Controller
             'password' => Hash::make(request('password'))
         ]);
 
-        return ('Registro exitoso');
+        return redirect('login');
     }
 
     /**

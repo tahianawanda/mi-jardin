@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Plant extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'type',
+        'location',
+        'state',
+        'image',
+        'description'
+    ];
 }

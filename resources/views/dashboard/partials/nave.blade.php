@@ -3,5 +3,10 @@
     <a href="#">Perfil</a>
     <a href="#">Plantas</a>
     <a href="#">Historial</a>
-    <a href="#">Cerrar sesión</a>
+
+    <!-- Formulario para cerrar sesión -->
+    <form action="{{ route('logout') }}" method="POST">
+        @csrf
+        <button type="submit">Cerrar sesión</button>
+    </form>
 </div>

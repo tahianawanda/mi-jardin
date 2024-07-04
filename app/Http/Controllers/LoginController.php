@@ -7,17 +7,6 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view ('acces/login');
@@ -34,41 +23,19 @@ class LoginController extends Controller
         ]);
 
         if(Auth::attempt($credenciales)){
-            return response('Ingreso exitoso');
+            request()->session()->regenerate(); 
+            return redirect()->intended('/');      
         }
         
-        return response('Ingreso fallido');
+        return back()->withErrors([
+            'email' => 'Las credenciales proporcionadas no coinciden con nuestros registros.',
+        ]);
     }
+    public function logout(){
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        Auth::logout();
+        request()->session()->regenerateToken();
+        request()->session()->invalidate();
+        return redirect('/login'); // Redirige a la página de inicio de sesión después de cerrar sesión
     }
 }

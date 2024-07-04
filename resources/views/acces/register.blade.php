@@ -5,12 +5,12 @@
 @section('content')
 <div class="container">
     <div class="image-container">
-        <img src="{{ asset('image/hongos.png') }}" alt="Imagen">
+        <img src="{{ asset('image/2.png') }}" alt="Imagen">
     </div>
     <div class="form-container">
         <div class="form">
             <h2>Regístrate</h2>
-            <form method="POST" action="{{ route('register.store') }}">
+            <form method="POST" action="{{ route('register') }}">
                 @csrf
                 <label>
                     Ingrese su nombre completo:
@@ -29,7 +29,7 @@
                     <input type="password" name="password_confirmation" required>
                 </label>
                 <button type="submit">Crear Usuario</button>
-                <a href="{{ route('login.create') }}" class="form-link">¿Ya tienes una cuenta? Ingresa por aquí</a>
+                <a href="{{ route('login') }}" class="form-link">¿Ya tienes una cuenta? Ingresa por aquí</a>
             </form>
         </div>
     </div>

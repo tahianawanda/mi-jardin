@@ -1,37 +1,15 @@
 body {
-    display: flex;
+    font-family: 'Wittgenstein', sans-serif;
+    background-color: #f4f4f9;
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-}
+    overflow: hidden; /* Para asegurarse de que no haya barras de desplazamiento */
 
-.panel-izquierdo {
-    width: 200px;
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
 }
-
-.panel-izquierdo h2 {
-    text-align: center;
-}
-
-.panel-izquierdo a {
-    display: block;
-    color: white;
-    padding: 10px 0;
-    text-decoration: none;
-    text-align: center;
-}
-
-.panel-izquierdo a:hover {
-    background-color: #34495e;
-}
-
 .contenido-derecho {
     margin-left: 220px; /* Mueve el contenido a la derecha del panel */
     padding: 20px;
@@ -40,50 +18,22 @@ body {
     border: 2px solid red; /* Añade un borde temporal para verificar */
 }
 
-.bienvenida {
-    text-align: center;
-    margin-bottom: 20px;
+.imagen-contenido {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-.bienvenida h1 {
-    color: #2c3e50;
-}
-
-.bienvenida p {
-    color: #555;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.estadisticas {
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.estadisticas h2 {
-    color: #2c3e50;
-}
-
-.estadisticas ul {
-    list-style-type: none;
+.imagen-contenido img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
     padding: 0;
-}
-
-.estadisticas ul li {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-}
-
-.estadisticas ul li span {
-    font-weight: bold;
-}
-
-.footer {
-    text-align: center;
-    color: #888;
-    margin-top: 20px;
-    font-size: 0.9rem;
 }
 
 

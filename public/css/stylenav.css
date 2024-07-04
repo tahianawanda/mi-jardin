@@ -1,0 +1,45 @@
+.panel-izquierdo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.panel-izquierdo h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.panel-izquierdo a,
+.panel-izquierdo button {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: calc(100% - 40px);
+    margin: 10px 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Wittgenstein', sans-serif;
+    font-size: 14px;
+}
+
+.panel-izquierdo button#logout-btn {
+    text-align: left; /* Alinea el texto del botón a la izquierda */
+    width: auto; /* Ajusta el ancho automáticamente según el contenido */
+    padding-left: 20px; /* Añade espacio a la izquierda para el texto */
+}
+
+.panel-izquierdo a:hover,
+.panel-izquierdo button:hover {
+    background-color: #34495e;
+}
