@@ -3,5 +3,5 @@
     <a href="#">Perfil</a>
     <a href="#">Plantas</a>
     <a href="#">Historial</a>
-    <a href="#">Cerrar sesion</a>
+    <a href="#">Cerrar sesión</a>
 </div>

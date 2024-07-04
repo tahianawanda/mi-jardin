@@ -1,29 +1,89 @@
-/* Panel Vertical Izquierdo */
-.panel-izquierdo {
-    position: fixed;       /* Mantiene el panel en su lugar al desplazarse */
-    top: 0;                /* Alinea con el borde superior de la pantalla */
-    left: 0;               /* Alinea con el borde izquierdo de la pantalla */
-    height: 100vh;         /* Ocupa toda la altura de la pantalla */
-    width: 250px;          /* Ancho fijo para el panel */
-    background-color: #333;/* Color de fondo */
-    color: white;          /* Color del texto */
-    padding: 20px;         /* Relleno interno */
-    box-shadow: 2px 0 5px rgba(0,0,0,0.5); /* Sombra para darle profundidad */
-    overflow-y: auto;      /* Añade un scrollbar si el contenido excede la altura del panel */
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
 }
 
-/* Estilos adicionales (opcional) */
+.panel-izquierdo {
+    width: 200px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 .panel-izquierdo h2 {
-    margin-top: 0;         /* Elimina el margen superior del título */
+    text-align: center;
 }
 
 .panel-izquierdo a {
-    color: #fff;           /* Color de los enlaces */
-    text-decoration: none; /* Sin subrayado */
-    display: block;        /* Cada enlace ocupa toda la línea */
-    padding: 10px 0;       /* Relleno para los enlaces */
+    display: block;
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+    text-align: center;
 }
 
 .panel-izquierdo a:hover {
-    background-color: #575757; /* Color de fondo al pasar el ratón */
+    background-color: #34495e;
 }
+
+.contenido-derecho {
+    margin-left: 220px; /* Mueve el contenido a la derecha del panel */
+    padding: 20px;
+    width: calc(100% - 220px); /* Ajusta el ancho del contenido */
+    background-color: lightgrey; /* Añade un fondo temporal para verificar */
+    border: 2px solid red; /* Añade un borde temporal para verificar */
+}
+
+.bienvenida {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bienvenida h1 {
+    color: #2c3e50;
+}
+
+.bienvenida p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.estadisticas {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.estadisticas h2 {
+    color: #2c3e50;
+}
+
+.estadisticas ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.estadisticas ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.estadisticas ul li span {
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    color: #888;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+
