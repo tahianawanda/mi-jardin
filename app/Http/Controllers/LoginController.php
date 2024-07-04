@@ -12,9 +12,6 @@ class LoginController extends Controller
         return view ('acces/login');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store()
     {
         $credenciales = request()->validate([
@@ -27,15 +24,14 @@ class LoginController extends Controller
             return redirect()->intended('/');      
         }
         
-        return back()->withErrors([
-            'email' => 'Las credenciales proporcionadas no coinciden con nuestros registros.',
-        ]);
+        return redirect('/login');
     }
+
     public function logout(){
 
         Auth::logout();
         request()->session()->regenerateToken();
         request()->session()->invalidate();
-        return redirect('/login'); // Redirige a la página de inicio de sesión después de cerrar sesión
+        return redirect('/login'); 
     }
 }
