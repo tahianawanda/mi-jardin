@@ -9,7 +9,8 @@
         de que formato es, y no solo esto sino que también
         hace que otros navegadores que no son compatibles
         también nos permita cargar la tipografía*/
-        src: url(static/Wittgenstein-Regular.ttf) format("truetype");
+        src: url(resource/css/static/Wittgenstein-Regular.ttf) format("truetype");
+        font-weight: 200;
     }
     @font-face {
         font-family: Wittgenstein;
