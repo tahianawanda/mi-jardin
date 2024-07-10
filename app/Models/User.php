@@ -44,4 +44,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function profile (){
+        //El hasOne traduce que tiene uno, relacion de un usuario con un perfil
+        return $this->hasOne(Profile::class);
+    }
+
+    public function plants() {
+        return $this->hasMany(Plant::class);
+    }
 }

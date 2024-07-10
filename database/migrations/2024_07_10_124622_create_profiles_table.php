@@ -11,21 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('plants', function (Blueprint $table) {
+        Schema::create('profiles', function (Blueprint $table) {
             $table->id();
 
-            $table->bigInteger('user_id')->unsigned()->nullable();
-            $table->string('name');
-            $table->string('type');
-            $table->string('location')->nullable();
-            $table->string('state')->nullable();
-            $table->string('image')->nullable();
-            $table->text('description')->nullable();
+            $table->bigInteger('user_id')->unsigned();
+            $table->string('instagram')->nullable();
+            $table->string('github')->nullable();
+            $table->string('web')->nullable();
 
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')
-                ->onDelete('set null')
+                ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
     }
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('plants');
+        Schema::dropIfExists('profiles');
     }
 };
