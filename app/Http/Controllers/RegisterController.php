@@ -18,9 +18,9 @@ class RegisterController extends Controller
     public function store()
     {
         request()->validate([
-            'name' => ['required'],
-            'email' => ['required'],
-            'password' => ['required', 'confirmed']
+            'name' => ['required', 'min:6', 'max:255'],
+            'email' => ['required', 'max:255'],
+            'password' => ['required','min:6','max:255', 'confirmed']
         ]);
         
         $newUser = User::create([
@@ -28,6 +28,8 @@ class RegisterController extends Controller
             'email' => request('email'),
             'password' => Hash::make(request('password'))
         ]);
+
+        session()->flash('status', 'Successful registration!');
 
         return redirect('login');
     }

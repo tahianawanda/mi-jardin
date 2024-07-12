@@ -1,6 +1,6 @@
 @extends('dashboard.layout')
 
-@section('title', 'Inicio')
+@section('title', 'Plantas')
 
 @section('content')
     <div class="estadisticas">
@@ -12,3 +12,4 @@
         </ul>
     </div>
 @endsection
+

@@ -15,10 +15,16 @@
                 <label>
                     Ingrese su correo electronico:
                     <input type="email" name="email" placeholder="tahiana@example.com" required>
+                    @error('email')
+                        <div class="form-error">{{ $message }}</div>
+                    @enderror
                 </label>
                 <label>
                     Ingrese su contraseña:
                     <input type="password" name="password" required>
+                    @error('password')
+                        <div class="form-error">{{ $message }}</div>
+                    @enderror
                 </label>
                 <button type="submit">Ingresar</button>
                 <a href="{{ route('register') }}" class="form-link">¿No tienes cuenta? Regístrate</a>

@@ -1,39 +1,33 @@
 body {
+    background-image: url(/resources/image/4.png);
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Para centrar la imagen */
     font-family: 'Wittgenstein', sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Eliminamos los márgenes por defecto */
+    padding: 0; /* Eliminamos el padding por defecto */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* 100% del alto de la ventana del navegador */
     overflow: hidden; /* Para asegurarse de que no haya barras de desplazamiento */
-
 }
-.contenido-derecho {
-    margin-left: 220px; /* Mueve el contenido a la derecha del panel */
+
+
+
+.container {
+    width: calc(100% - 250px);
+    height: 80vh;
     padding: 20px;
-    width: calc(100% - 220px); /* Ajusta el ancho del contenido */
-    background-color: lightgrey; /* Añade un fondo temporal para verificar */
-    border: 2px solid red; /* Añade un borde temporal para verificar */
+    margin-left: 300px;
+    margin-top: 20px;
 }
 
-.imagen-contenido {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.estadisticas {
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-translúcido */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.imagen-contenido img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    margin: 0;
-    padding: 0;
-}
-
 
