@@ -32,15 +32,11 @@
     npm install
     ```
 4. Configura tu archivo `.env` con la información de tu base de datos y otras configuraciones necesarias.
-5. Genera la clave de la aplicación:
-    ```sh
-    php artisan key:generate
-    ```
-6. Migra la base de datos:
+5. Migra la base de datos:
     ```sh
     php artisan migrate
     ```
-7. Compila los assets frontend:
+6. Compila los assets frontend:
     ```sh
     npm run dev
     ```
@@ -52,16 +48,6 @@
     http://localhost:8000
     ```
 - Usa la interfaz para agregar, visualizar, editar y eliminar plantas de tu inventario.
-
-## Contribuir
-
-¡Las contribuciones son bienvenidas! Si deseas contribuir, por favor sigue estos pasos:
-1. Haz un fork del repositorio.
-2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
-3. Realiza tus cambios y haz commits (`git commit -m 'Agregar nueva funcionalidad'`).
-4. Envía tus cambios a la rama principal (`git push origin feature/nueva-funcionalidad`).
-5. Crea un Pull Request.
-
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) para más detalles.
