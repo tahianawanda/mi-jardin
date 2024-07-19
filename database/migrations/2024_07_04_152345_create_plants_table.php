@@ -14,19 +14,16 @@ return new class extends Migration
         Schema::create('plants', function (Blueprint $table) {
             $table->id();
 
-            $table->bigInteger('user_id')->unsigned()->nullable();
-            $table->string('name');
-            $table->string('type');
+            $table->string('name')->nullable();;
+            $table->string('type')->nullable();;
             $table->string('location')->nullable();
             $table->string('state')->nullable();
             $table->string('image')->nullable();
             $table->text('description')->nullable();
 
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users')
-                ->onDelete('set null')
-                ->onUpdate('cascade');
         });
     }
 

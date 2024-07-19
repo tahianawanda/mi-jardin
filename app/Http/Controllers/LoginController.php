@@ -22,7 +22,7 @@ class LoginController extends Controller
 
         if(Auth::attempt($credenciales)){
             request()->session()->regenerate(); 
-            return redirect()->intended('/');      
+            return redirect()->intended('/plant');      
         }
         
         throw ValidationException::withMessages([

@@ -1,33 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body {
-    background-image: url(/resources/image/4.png);
+    background-image: url(/public/image/4.png);
     background-size: cover; /* Para que la imagen cubra todo el fondo */
     background-position: center; /* Para centrar la imagen */
-    font-family: 'Wittgenstein', sans-serif;
+    font-family: 'Lora', sans-serif;
     margin: 0; /* Eliminamos los márgenes por defecto */
     padding: 0; /* Eliminamos el padding por defecto */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* 100% del alto de la ventana del navegador */
-    overflow: hidden; /* Para asegurarse de que no haya barras de desplazamiento */
+    min-height: 100vh; /* Asegura que el body tenga al menos el 100% del alto de la ventana */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
 }
-
-
-
-.container {
-    width: calc(100% - 250px);
-    height: 80vh;
-    padding: 20px;
-    margin-left: 300px;
-    margin-top: 20px;
-}
-
-.estadisticas {
-    max-width: 800px; /* Ancho máximo del contenido */
-    margin: 0 auto; /* Centrar el contenido horizontalmente */
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-translúcido */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-

@@ -14,11 +14,7 @@ class Plant extends Model
         'location',
         'state',
         'image',
-        'description'
+        'description',
+        'user_id'
     ];
-
-    public function user(){
-        return $this->belongsTo('User::class');
-    }
-
 }
