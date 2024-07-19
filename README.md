@@ -32,11 +32,15 @@
     npm install
     ```
 4. Configura tu archivo `.env` con la información de tu base de datos y otras configuraciones necesarias.
-5. Migra la base de datos:
+5. Genera la clave de la aplicación:
+    ```sh
+    php artisan key:generate
+    ```
+6. Migra la base de datos:
     ```sh
     php artisan migrate
     ```
-6. Compila los assets frontend:
+7. Compila los assets frontend:
     ```sh
     npm run dev
     ```
@@ -48,6 +52,8 @@
     http://localhost:8000
     ```
 - Usa la interfaz para agregar, visualizar, editar y eliminar plantas de tu inventario.
+
+
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) para más detalles.
