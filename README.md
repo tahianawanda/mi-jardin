@@ -62,15 +62,7 @@
     npm run dev
     ```
 
-## Uso
 
-- Accede a la aplicación en tu navegador:
-    ```
-    http://localhost:8000
-    ```
-- Usa la interfaz para agregar, visualizar, editar y eliminar plantas de tu inventario.
-
-
-## Licencia
+## 📜 Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) para más detalles.
