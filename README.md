@@ -26,7 +26,7 @@
 - Base de datos MySQL o compatible
 - Servidor web compatible (Apache, Nginx, etc.)
 
-## Tecnologías Utilizadas
+## 🛠️ Tecnologías Utilizadas
 
 - **Laravel**: Framework PHP para el desarrollo backend.
 - **Tailwind CSS**: Framework de CSS para el diseño de la interfaz.
