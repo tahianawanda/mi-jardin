@@ -1,16 +1,30 @@
 # Mi Jardín
 
-## Características Principales
+# Mi Jardín: Gestión de Plantas
 
-- Registro de nuevas plantas con detalles como nombre, tipo y fecha de agregado.
-- Visualización de la colección de plantas en una interfaz amigable.
-- Edición y eliminación de registros de plantas.
-- Estadísticas básicas sobre la colección de plantas.
+**Mi Jardín** es una aplicación para la gestión de plantas que permite a los usuarios registrar, visualizar, editar y eliminar plantas de manera intuitiva. Además, ofrece una serie de características avanzadas para la administración de la colección de plantas y perfiles de usuario personalizados.
 
-## Perfil de usuario
+## 🚀 **Características Principales**
 
-- Foto de perfil: Personaliza tu perfil con una imagen.
-- Detalles personales: Agrega información como ubicación, biografía, instagram, github y sitio web.
+- **Registro de Nuevas Plantas**: Agrega plantas con detalles completos como nombre, tipo, fecha de agregado y una galería de fotos asociadas.
+- **Visualización Amigable**: Consulta y visualiza la colección de plantas en una interfaz intuitiva, con imágenes representativas para cada planta.
+- **Edición y Eliminación**: Modifica o elimina registros de plantas fácilmente, con todas las acciones registradas en un historial detallado.
+- **Historial de Plantas**: Mantén un seguimiento completo de todas las acciones realizadas en las plantas, incluyendo creaciones, ediciones y eliminaciones.
+- **Estadísticas Básicas**: Obtén análisis básicos sobre la colección de plantas, como el número total de plantas y distribución por tipo.
+
+## 👤 **Perfil de Usuario**
+
+- **Foto de Perfil**: Personaliza tu cuenta con una foto de perfil que refleje tu identidad.
+- **Detalles Personales**: Completa y actualiza tu información personal, incluyendo ubicación, biografía y enlaces a tus redes sociales como Instagram, GitHub y sitio web.
+- **Historial del Usuario**: Visualiza un historial completo de tus acciones relacionadas con las plantas, incluyendo la creación, edición y eliminación de registros.
+- **Fotos de Plantas**: Agrega y gestiona una galería de fotos para cada planta registrada, mejorando la visualización y seguimiento de tu colección.
+
+## 📜 **Requisitos**
+
+- PHP 7.3 o superior
+- Laravel 8 o superior
+- Base de datos MySQL o compatible
+- Servidor web compatible (Apache, Nginx, etc.)
 
 ## Tecnologías Utilizadas
 
@@ -19,7 +33,7 @@
 - **Vite**: Herramienta de construcción para el desarrollo frontend.
 - **MySQL**: Sistema de gestión de bases de datos relacional.
 
-## Instalación y Configuración
+## ⚙️ Instalación y Configuración
 
 1. Clona el repositorio:
     ```sh
