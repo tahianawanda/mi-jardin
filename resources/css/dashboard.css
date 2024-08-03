@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background-image: url(/public/image/4.png);
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Para centrar la imagen */
+    font-family: 'Lora', sans-serif;
+    margin: 0; /* Eliminamos los márgenes por defecto */
+    padding: 0; /* Eliminamos el padding por defecto */
+    min-height: 100vh; /* Asegura que el body tenga al menos el 100% del alto de la ventana */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+}
