@@ -12,11 +12,24 @@ use App\Models\Photo;
 class PlantController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $user = User::with('plants')->findOrFail(auth()->id());
+        $searchTerm = $request->input('search');
+        $user = auth()->user();
 
-        return view('dashboard/plant/index', compact('user'));
+        if ($searchTerm) {
+            // Buscar plantas según el término de búsqueda
+            $plants = $user->plants()
+                ->where('name', 'like', '%' . $searchTerm . '%')
+                ->orWhere('species', 'like', '%' . $searchTerm . '%')
+                ->get();
+        } else {
+            // Mostrar todas las plantas
+            $plants = $user->plants;
+        }
+
+        // Devolver la vista con las plantas y el usuario
+        return view('dashboard.plant.index', compact('plants', 'user'));;
     }
 
     public function create()
@@ -146,4 +159,5 @@ class PlantController extends Controller
 
         return to_route('plant.index');
     }
+
 }

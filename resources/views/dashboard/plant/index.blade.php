@@ -4,14 +4,23 @@
 
 @section('content')
     <div class="bg-white rounded-lg p-4">
-        <h2 class="text-lg font-semibold">Plantas de: <span class="font-thin">{{ $user->name }}</span> </h2>
+        <h2 class="text-lg font-semibold">Plantas de: <span class="font-thin">{{ $user->name }}</span></h2>
+    </div>
+    <div class="bg-white rounded-lg p-4 mt-4">
+        <form action="{{ route('plant.index') }}" method="GET">
+            @csrf
+            <label class="block">
+                <input type="text" name="search" class="form-input mt-1 block w-full" placeholder="Ingrese el nombre de una planta o especie" value="{{ request()->input('search') }}">
+                <button type="submit" class="bg-red-200 hover:bg-red-300 text-red-700 border border-red-600 rounded px-3 py-1 mt-2">Buscar</button>
+            </label>
+        </form>
     </div>
     <div class="bg-white p-4 rounded-lg shadow-md mt-4">
-        @if (Auth::user()->plants->isEmpty())
-            <p class="text-gray-600">No hay plantas registradas.</p>
+        @if ($plants->isEmpty())
+            <p class="text-gray-600">No se encontraron plantas.</p>
         @else
             <ul>
-                @foreach ($user->plants as $plant)
+                @foreach ($plants as $plant)
                     <li class="border-b border-gray-200 py-2 flex items-center justify-between">
                         <div class="flex items-center">
                             <div>
@@ -33,7 +42,7 @@
             </ul>
         @endif
     </div>
-    
+
     <div class="bg-white rounded-lg p-4 mt-4">
         <a href="{{ route('plant.create') }}" class="bg-red-200 hover:bg-red-300 text-red-700 border border-red-600 rounded p-3 px-20">Agregar</a>
     </div>
