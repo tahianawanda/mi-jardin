@@ -69,4 +69,8 @@ class User extends Authenticatable
     {
         return $this->role === $role;
     }
+    public function hasProfile()
+    {
+        return $this->profile()->exists();
+    }
 }
