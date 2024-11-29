@@ -1,9 +1,9 @@
-# Mi Jardín
+# My Scientific Garden
 
-# Mi Jardín: Gestión de Plantas
+**My Scientific Garden** My Scientific Garden es una plataforma diseñada para almacenar y gestionar de manera profesional información sobre las plantas e insectos de tu jardín. Este proyecto no solo te permite registrar tus descubrimientos, sino que también te acerca a ellos desde una perspectiva científica y educativa, explorando datos biológicos que enriquecen tu conocimiento.
 
-**Mi Jardín** es una aplicación para la gestión de plantas que permite a los usuarios registrar, visualizar, editar y eliminar plantas de manera intuitiva. Además, ofrece una serie de características avanzadas para la administración de la colección de plantas y perfiles de usuario personalizados.
-
+🌿 Descubre. Aprende. Conecta.
+Adéntrate en el fascinante mundo de la biología con My Scientific Garden y convierte tu jardín en un laboratorio vivo. ¿Qué esperas para explorar este increíble universo?
 ## 🚀 **Características Principales**
 
 - **Registro de Nuevas Plantas**: Agrega plantas con detalles completos como nombre, tipo, fecha de agregado y una galería de fotos asociadas.
