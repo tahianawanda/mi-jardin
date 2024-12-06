@@ -17,7 +17,7 @@ Route::resource('plants', PlantController::class)->except(['index']);
 Route::get('home', [HomeController::class, 'index'])->name('home.index');
 Route::get('my-garden', [PlantController::class, 'index'])->name('plant.index');
 Route::get('forums', [PostController::class, 'index'])->name('post.index');
-Route::view('natures-map', 'nature-map');
+Route::view('natures-map', 'naturemap');
 Route::get('settings', [HomeController::class, 'index'])->name('setting.index');
 
 //Login and register
