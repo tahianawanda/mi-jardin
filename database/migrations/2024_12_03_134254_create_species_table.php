@@ -15,14 +15,16 @@ return new class extends Migration
             $table->id();
 
             //Key Foreigns
-            $table->unsignedBigInteger('genres_id');
+            $table->unsignedBigInteger('genre_id');
 
-            $table->foreign('genres_id')
+            $table->foreign('genre_id')
                 ->references('id')
                 ->on('genres')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
+            //Other columns
+            $table->string('name');
             $table->timestamps();
         });
     }

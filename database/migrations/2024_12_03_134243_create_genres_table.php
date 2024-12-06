@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
 
             //Key Foreigns for categorys
-            $table->unsignedBigInteger('families_id');
+            $table->unsignedBigInteger('family_id');
 
-            $table->foreign('families_id')
+            $table->foreign('family_id')
                 ->references('id')
                 ->on('families')
                 ->onUpdate('cascade')
