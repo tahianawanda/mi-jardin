@@ -14,6 +14,7 @@ Route::resource('posts', PostController::class)->except(['index']);
 Route::resource('plants', PlantController::class)->except(['index']);
 
 // Sections webs
+Route::redirect('/', '/home');
 Route::get('home', [HomeController::class, 'index'])->name('home.index');
 Route::get('my-garden', [PlantController::class, 'index'])->name('plant.index');
 Route::get('forums', [PostController::class, 'index'])->name('post.index');

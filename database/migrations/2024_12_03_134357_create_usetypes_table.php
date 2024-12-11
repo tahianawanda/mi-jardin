@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
 
             //Key Foreigns
-            $table->unsignedBigInteger('plantaes_id');
+            $table->unsignedBigInteger('plantae_id');
 
-            $table->foreign('plantaes_id')
+            $table->foreign('plantae_id')
                 ->references('id')
                 ->on('plantaes')
                 ->onUpdate('cascade')

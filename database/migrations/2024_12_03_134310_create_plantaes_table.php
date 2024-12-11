@@ -15,19 +15,27 @@ return new class extends Migration
             $table->id();
 
             //Key Foreigns
-            $table->unsignedBigInteger('kingdoms_id');
+            $table->unsignedBigInteger('kingdom_id');
 
-            $table->foreign('kingdoms_id')
+            $table->foreign('kingdom_id')
                 ->references('id')
                 ->on('kingdoms')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->unsignedBigInteger('categories_id');
+            $table->unsignedBigInteger('categorie_id');
 
-            $table->foreign('categories_id')
+            $table->foreign('categorie_id')
                 ->references('id')
                 ->on('categories')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->unsignedBigInteger('user_id');
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
