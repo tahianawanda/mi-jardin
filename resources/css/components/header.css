@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    padding: 0.5rem;
+}
+
+header ul {
+    display: flex;
+}
+
+.nav-link {
+    padding: 0.3rem;
+}
+
+.nav-link:hover {
+    color: bisque;
+}
