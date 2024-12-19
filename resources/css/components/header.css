@@ -1,16 +1,22 @@
 header {
     display: flex;
     padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-logo {
+    display: block;
+    width: 50px;
+    height: auto;
 }
 
 header ul {
     display: flex;
+    align-items: center;
 }
 
-.nav-link {
-    padding: 0.3rem;
+header li {
+    padding: 0.5rem;
 }
 
-.nav-link:hover {
-    color: bisque;
-}

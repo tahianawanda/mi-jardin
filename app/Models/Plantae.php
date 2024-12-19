@@ -16,7 +16,9 @@ class Plantae extends Model
         'type',
         'growth_habit',
         'native_region',
-        'description'
+        'description',
+        'user_id',
+        'kingdom_id'
     ];
 
     public function kingdom()
