@@ -2,7 +2,7 @@
 
 My Scientific Garden es una aplicación frontend en desarrollo diseñada para complementar la API ScientificGardenAPI. Permite almacenar y gestionar de manera profesional información sobre las plantas e insectos de tu jardín, brindando una experiencia interactiva y educativa.
 
-🌿 Descubre. Aprende. Conecta.
+*🌿 Descubre. Aprende. Conecta.*
 
 Trabajando en conjunto con ScientificGardenAPI, esta plataforma ofrece un sistema completo para la gestión de biodiversidad. Actualmente, el proyecto se encuentra en fase de desarrollo activo.
 
